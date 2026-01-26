@@ -22,7 +22,7 @@ CHUNK_SIZE = 1000
 CHUNK_OVERLAP = 100
 
 EMBED_MODEL = 'intfloat/multilingual-e5-large'
-LLM_MODEL = 'xiaomi/mimo-v2-flash:free'
+LLM_MODEL = 'mistralai/devstral-2512:free'
 
 Settings.embed_model = HuggingFaceEmbedding(
     model_name=EMBED_MODEL,
@@ -31,7 +31,8 @@ Settings.embed_model = HuggingFaceEmbedding(
 
 Settings.llm = OpenRouter(
     api_key=OPENROUTER_API_KEY,
-    model=LLM_MODEL
+    model=LLM_MODEL,
+    max_tokens=2000
 )
 
 if not os.path.exists(PERSIST_DIR):

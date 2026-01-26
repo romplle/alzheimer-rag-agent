@@ -15,7 +15,7 @@ from prompt import QA_PROMPT
 
 PERSIST_DIR = 'data/index_storage'
 EMBED_MODEL = 'intfloat/multilingual-e5-large'
-LLM_MODEL = 'xiaomi/mimo-v2-flash:free'
+LLM_MODEL = 'mistralai/devstral-2512:free'
 
 @st.cache_resource
 def load_query_engine():
@@ -26,7 +26,8 @@ def load_query_engine():
 
     Settings.llm = OpenRouter(
         api_key=OPENROUTER_API_KEY,
-        model=LLM_MODEL
+        model=LLM_MODEL,
+        max_tokens=2000
     )
 
     storage_context = StorageContext.from_defaults(persist_dir=PERSIST_DIR)
