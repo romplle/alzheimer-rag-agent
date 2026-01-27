@@ -8,6 +8,7 @@ from llama_index.core import (
     load_index_from_storage
 )
 from llama_index.core.node_parser import SentenceSplitter
+from llama_index.core.postprocessor import SentenceTransformerRerank
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.llms.openrouter import OpenRouter
 
@@ -44,9 +45,16 @@ else:
     storage_context = StorageContext.from_defaults(persist_dir=PERSIST_DIR)
     index = load_index_from_storage(storage_context)
 
+reranker = SentenceTransformerRerank(
+    model="BAAI/bge-reranker-large",
+    top_n=10,
+    device="cuda"
+)
+
 query_engine = index.as_query_engine(
-    similarity_top_k=3,
-    response_mode='compact',
+    similarity_top_k=25,
+    node_postprocessors=[reranker],
+    response_mode="compact",
     text_qa_template=QA_PROMPT,
 )
 
