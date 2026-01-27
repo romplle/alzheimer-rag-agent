@@ -15,7 +15,7 @@ from prompt import QA_PROMPT
 
 
 PERSIST_DIR = 'data/index_storage'
-EMBED_MODEL = 'intfloat/multilingual-e5-large'
+EMBED_MODEL = 'Qwen/Qwen3-Embedding-0.6B'
 LLM_MODEL = 'mistralai/devstral-2512:free'
 
 @st.cache_resource

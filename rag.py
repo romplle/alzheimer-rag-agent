@@ -22,7 +22,7 @@ PERSIST_DIR = 'data/index_storage'
 CHUNK_SIZE = 1000
 CHUNK_OVERLAP = 100
 
-EMBED_MODEL = 'intfloat/multilingual-e5-large'
+EMBED_MODEL = 'Qwen/Qwen3-Embedding-0.6B'
 LLM_MODEL = 'mistralai/devstral-2512:free'
 
 Settings.embed_model = HuggingFaceEmbedding(
