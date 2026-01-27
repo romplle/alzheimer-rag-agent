@@ -1,53 +1,7 @@
-import streamlit as st
 from pathlib import Path
+import streamlit as st
 
-from llama_index.core import (
-    StorageContext,
-    Settings,
-    load_index_from_storage,
-)
-from llama_index.core.postprocessor import SentenceTransformerRerank
-from llama_index.embeddings.huggingface import HuggingFaceEmbedding
-from llama_index.llms.openrouter import OpenRouter
-
-from api_key import OPENROUTER_API_KEY
-from prompt import QA_PROMPT
-
-
-PERSIST_DIR = 'data/index_storage'
-EMBED_MODEL = 'Qwen/Qwen3-Embedding-0.6B'
-LLM_MODEL = 'mistralai/devstral-2512:free'
-
-@st.cache_resource
-def load_query_engine():
-    Settings.embed_model = HuggingFaceEmbedding(
-        model_name=EMBED_MODEL,
-        device='cuda'
-    )
-
-    Settings.llm = OpenRouter(
-        api_key=OPENROUTER_API_KEY,
-        model=LLM_MODEL,
-        max_tokens=2000
-    )
-
-    storage_context = StorageContext.from_defaults(persist_dir=PERSIST_DIR)
-    index = load_index_from_storage(storage_context)
-
-    reranker = SentenceTransformerRerank(
-        model="BAAI/bge-reranker-large",
-        top_n=10,
-        device="cuda"
-    )
-
-    query_engine = index.as_query_engine(
-        similarity_top_k=25,
-        node_postprocessors=[reranker],
-        response_mode="compact",
-        text_qa_template=QA_PROMPT,
-    )
-    return query_engine
-
+from rag import load_query_engine
 
 st.set_page_config(
     page_title='Alzheimer RAG-agent',
