@@ -54,13 +54,13 @@ def load_query_engine():
         index = load_index_from_storage(storage_context)
 
     reranker = SentenceTransformerRerank(
-        model='BAAI/bge-reranker-large',
-        top_n=10,
+        model='BAAI/bge-reranker-base',
+        top_n=7,
         device=DEVICE
     )
 
     query_engine = index.as_query_engine(
-        similarity_top_k=25,
+        similarity_top_k=20,
         node_postprocessors=[reranker],
         response_mode='compact',
         text_qa_template=QA_PROMPT,
