@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import chromadb
 
@@ -43,16 +44,31 @@ def load_query_engine():
     chroma_collection = chroma_client.get_or_create_collection('alzheimer_papers')
     
     vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
-    storage_context = StorageContext.from_defaults(persist_dir=PERSIST_DIR, vector_store=vector_store)
 
-    if chroma_collection.count() == 0:
-        documents = SimpleDirectoryReader(input_dir=DATA_FOLDER,required_exts=['.md']).load_data(show_progress=True)
-        splitter = SentenceSplitter(chunk_size=1000, chunk_overlap=100)
-        index = VectorStoreIndex.from_documents(documents, transformations=[splitter], storage_context=storage_context, show_progress=True)
-        index.storage_context.persist(persist_dir=PERSIST_DIR)
-    else:
+    docstore_path = os.path.join(PERSIST_DIR, 'docstore.json')
+    
+    if os.path.exists(docstore_path):
+        storage_context = StorageContext.from_defaults(
+            persist_dir=PERSIST_DIR,
+            vector_store=vector_store
+        )
         index = load_index_from_storage(storage_context)
-
+    else:
+        storage_context = StorageContext.from_defaults(vector_store=vector_store)
+        documents = SimpleDirectoryReader(
+            input_dir=DATA_FOLDER,
+            required_exts=['.md']
+        ).load_data(show_progress=True)
+        
+        splitter = SentenceSplitter(chunk_size=1000, chunk_overlap=100)
+        index = VectorStoreIndex.from_documents(
+            documents,
+            transformations=[splitter],
+            storage_context=storage_context,
+            show_progress=True
+        )
+        index.storage_context.persist(persist_dir=PERSIST_DIR)
+    
     reranker = SentenceTransformerRerank(
         model='BAAI/bge-reranker-base',
         top_n=7,
