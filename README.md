@@ -70,8 +70,8 @@ RAG-пайплайн построен на LlamaIndex. Ключевые комп
 
 1. Клонируйте репозиторий: `git clone <repo_url>`.
 2. Установите зависимости: `pip install -r requirements.txt`.
-3. Создайте `api_key.py` файл с `OPENROUTER_API_KEY=your_key`.
-4. Подготовьте данные: Скачайте PDF в `data/papers` (список ниже). Запустите `python data_load.py` для извлечения текстов в `data/extracted_texts`.
+3. Настройте переменные окружения: Скопируйте шаблон: `copy .env.example .env`. Откройте файл .env и вставьте свой ключ OpenRouter.
+4. Подготовьте данные: Скачайте PDF-файлы по ссылкам из таблицы ниже и поместите их в папку `data/papers`. Запустите `python data_load.py` для извлечения текстов в `data/extracted_texts`.
 5. Создайте/загрузите индекс: Запустите `python rag.py` (автоматически создаст persistent index в `data/index_storage` если пусто).
 6. Запустите приложение: `streamlit run app.py`.
 7. Оценка: `python evaluation.py` (выводит метрики в консоль).
@@ -84,7 +84,8 @@ RAG-пайплайн построен на LlamaIndex. Ключевые комп
 ├── evaluation.py         # Скрипт для оценки RAG
 ├── prompt.py             # Кастомный промпт для QA
 ├── rag.py                # RAG-пайплайн: настройка моделей, индекса и query engine
-├── api_key.py            # Хранение API-ключа
+├── .env.example          # Шаблон для .env
+├── .env                  # Хранение API-ключа (локально)
 ├── data/
 │   ├── papers/           # PDF-статьи
 │   ├── extracted_texts/  # Извлеченные и очищенные Markdown-тексты

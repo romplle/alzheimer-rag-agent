@@ -1,4 +1,4 @@
-api_key.py
+.env
 data/papers/*.pdf
 data/index_storage
 data/extracted_texts

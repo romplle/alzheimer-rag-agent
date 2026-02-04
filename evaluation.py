@@ -1,12 +1,18 @@
+import os
+from dotenv import load_dotenv
+
 from llama_index.core.evaluation import (
     FaithfulnessEvaluator,
     RelevancyEvaluator,
 )
 from llama_index.llms.openrouter import OpenRouter
 
-from api_key import OPENROUTER_API_KEY
 from rag import load_query_engine
 
+load_dotenv()
+OPENROUTER_API_KEY = os.getenv('OPENROUTER_API_KEY')
+if not OPENROUTER_API_KEY:
+    raise ValueError('OPENROUTER_API_KEY not found')
 
 query_engine = load_query_engine()
 
@@ -22,7 +28,6 @@ questions = [
     "What are potential targets for Alzheimer's disease treatment?",
     "Are the targets druggable with small molecules, biologics, or other modalities?",
     "What additional studies are needed to advance these targets?",
-
 ]
 
 eval_results = []

@@ -3,3 +3,4 @@ llama_index==0.14.13
 pymupdf==1.26.7
 pymupdf4llm==0.2.9
 streamlit==1.53.1
+python-dotenv==1.2.1

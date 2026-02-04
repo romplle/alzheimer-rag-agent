@@ -1,6 +1,7 @@
 import os
 import streamlit as st
 import chromadb
+from dotenv import load_dotenv
 
 from llama_index.core import (
     Settings,
@@ -15,9 +16,13 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.llms.openrouter import OpenRouter
 from llama_index.vector_stores.chroma import ChromaVectorStore
 
-from api_key import OPENROUTER_API_KEY
 from prompt import QA_PROMPT
 
+load_dotenv()
+
+OPENROUTER_API_KEY = os.getenv('OPENROUTER_API_KEY')
+if not OPENROUTER_API_KEY:
+    raise ValueError('OPENROUTER_API_KEY not found')
 
 DATA_FOLDER = 'data/extracted_texts'
 PERSIST_DIR = 'data/index_storage'
