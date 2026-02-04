@@ -108,33 +108,33 @@ RAG-пайплайн построен на LlamaIndex. Ключевые комп
 
 ## Список использованных статей
 
-| Название | Год |
-|----------|-----|
-| Alzheimer disease | 2021 |
-| Alzheimer’s Disease: Novel Targets and Investigational Drugs for Disease Modification | 2023 |
-| Alzheimer’s disease master regulators analysis: search for potential molecular targets and drug repositioning candidates | 2018 |
-| Amyloid β-based therapy for Alzheimer’s disease: challenges, successes and future | 2023 |
-| Amyloid-β-targeted therapies for Alzheimer’s disease: currently and in the future | 2023 |
-| APP dyshomeostasis in the pathogenesis of Alzheimer’s disease implications for current drug targets | 2024 |
-| Beyond expectations: investigating nilotinib’s potential in attenuating neurodegeneration in Alzheimer’s disease | 2025 |
-| Comprehensive Review on Alzheimer’s Disease: Causes and Treatment | 2020 |
-| Current and emerging therapeutic targets of alzheimer's disease for the design of multi-target directed ligands | 2019 |
-| Current and future therapeutic strategies for Alzheimer’s disease: an overview of drug development bottlenecks | 2023 |
-| Current Research Therapeutic Strategies for Alzheimer’s Disease Treatment | 2025 |
-| Current therapeutics for Alzheimer’s disease and clinical trials | 2024 |
-| Diverse Molecular Targets for Therapeutic Strategies in Alzheimer’s Disease | 2014 |
-| Genetic insights into drug targets for alzheimer’s disease: integrative multiomics analysis | 2025 |
-| New Pathways Identify Novel Drug Targets for the Prevention and Treatment of Alzheimer’s Disease | 2023 |
-| Non-pharmacological treatment of Alzheimer’s disease: an update | 2025 |
-| Pharmacotherapeutic targets in Alzheimerʼs disease | 2008 |
-| Protein kinases as therapeutic targets for Alzheimer’s disease: a brief review | 2024 |
-| Recent Advances in Drug Development for Alzheimer’s Disease: A Comprehensive Review | 2025 |
-| Review of Pharmacotherapeutic Targets in Alzheimer’s Disease and Its Management Using Traditional Medicinal Plants | 2024 |
-| Targeting the Synergistic Interaction of Pathologies in Alzheimer's Disease: Rationale and Prospects for Combination Therapy | 2025 |
-| Tau and neuroinflammation in Alzheimer’s disease: interplay mechanisms and clinical translation | 2023 |
-| Therapeutic Advances in Targeting the Amyloid-β Pathway for Alzheimer’s Disease | 2025 |
-| Therapeutic Targets for Alzheimer’s Disease: Amyloid Vs. Non Amyloid. Where Does Consensus Lie Today? An CTAD Task Force Report | 2023 |
-| Treatment of Alzheimer’s Disease: Beyond Symptomatic Therapies | 2023 |
+| Название | Год | Ссылка на pdf-файл |
+|----------|-----|--------|
+| Alzheimer disease | 2021 | https://pmc.ncbi.nlm.nih.gov/articles/PMC8574196/pdf/nihms-1749938.pdf |
+| Alzheimer’s Disease: Novel Targets and Investigational Drugs for Disease Modification | 2023 | https://pmc.ncbi.nlm.nih.gov/articles/PMC10582128/pdf/40265_2023_Article_1938.pdf |
+| Alzheimer’s disease master regulators analysis: search for potential molecular targets and drug repositioning candidates | 2018 | https://pmc.ncbi.nlm.nih.gov/articles/PMC6015462/pdf/13195_2018_Article_394.pdf |
+| Amyloid β-based therapy for Alzheimer’s disease: challenges, successes and future | 2023 | https://pmc.ncbi.nlm.nih.gov/articles/PMC10310781/pdf/41392_2023_Article_1484.pdf |
+| Amyloid-β-targeted therapies for Alzheimer’s disease: currently and in the future | 2023 | https://www.researchgate.net/journal/Ageing-and-Neurodegenerative-Diseases-2769-5301/publication/372888282_Amyloid-b-targeted_therapies_for_Alzheimers_disease_currently_and_in_the_future/links/64d5e8adc80b93026904a929/Amyloid-b-targeted-therapies-for-Alzheimers-disease-currently-and-in-the-future.pdf?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6InB1YmxpY2F0aW9uIn19 |
+| APP dyshomeostasis in the pathogenesis of Alzheimer’s disease implications for current drug targets | 2024 | https://pmc.ncbi.nlm.nih.gov/articles/PMC11218153/pdf/13195_2024_Article_1504.pdf |
+| Beyond expectations: investigating nilotinib’s potential in attenuating neurodegeneration in Alzheimer’s disease | 2025 | https://pmc.ncbi.nlm.nih.gov/articles/PMC11909998/pdf/13195_2025_Article_1706.pdf |
+| Comprehensive Review on Alzheimer’s Disease: Causes and Treatment | 2020 | https://pmc.ncbi.nlm.nih.gov/articles/PMC7764106/pdf/molecules-25-05789.pdf |
+| Current and emerging therapeutic targets of alzheimer's disease for the design of multi-target directed ligands | 2019 | https://pmc.ncbi.nlm.nih.gov/articles/PMC7069509/pdf/MD-010-C9MD00337A.pdf |
+| Current and future therapeutic strategies for Alzheimer’s disease: an overview of drug development bottlenecks | 2023 | https://pmc.ncbi.nlm.nih.gov/articles/PMC10438465/pdf/fnagi-15-1206572.pdf |
+| Current Research Therapeutic Strategies for Alzheimer’s Disease Treatment | 2025 | https://pmc.ncbi.nlm.nih.gov/articles/PMC4735913/pdf/NP2016-8501693.pdf |
+| Current therapeutics for Alzheimer’s disease and clinical trials | 2024 | https://www.explorationpub.com/uploads/Article/A100648/100648.pdf |
+| Diverse Molecular Targets for Therapeutic Strategies in Alzheimer’s Disease | 2014 | https://pmc.ncbi.nlm.nih.gov/articles/PMC4101776/pdf/jkms-29-893.pdf |
+| Genetic insights into drug targets for alzheimer’s disease: integrative multiomics analysis | 2025 | https://pmc.ncbi.nlm.nih.gov/articles/PMC12681122/pdf/13195_2025_Article_1901.pdf |
+| New Pathways Identify Novel Drug Targets for the Prevention and Treatment of Alzheimer’s Disease | 2023 | https://pmc.ncbi.nlm.nih.gov/articles/PMC10049476/pdf/ijms-24-05383.pdf |
+| Non-pharmacological treatment of Alzheimer’s disease: an update | 2025 | https://pmc.ncbi.nlm.nih.gov/articles/PMC11865074/pdf/fnagi-17-1527242.pdf |
+| Pharmacotherapeutic targets in Alzheimerʼs disease | 2008 | https://pmc.ncbi.nlm.nih.gov/articles/PMC3823037/pdf/jcmm0013-0061.pdf |
+| Protein kinases as therapeutic targets for Alzheimer’s disease: a brief review | 2024 | https://www.explorationpub.com/uploads/Article/A100492/100492.pdf |
+| Recent Advances in Drug Development for Alzheimer’s Disease: A Comprehensive Review | 2025 | https://pmc.ncbi.nlm.nih.gov/articles/PMC12028297/pdf/ijms-26-03905.pdf |
+| Review of Pharmacotherapeutic Targets in Alzheimer’s Disease and Its Management Using Traditional Medicinal Plants | 2024 | https://pmc.ncbi.nlm.nih.gov/articles/PMC11114142/pdf/dnnd-14-47.pdf |
+| Targeting the Synergistic Interaction of Pathologies in Alzheimer's Disease: Rationale and Prospects for Combination Therapy | 2025 | https://arxiv.org/pdf/2512.10981 |
+| Tau and neuroinflammation in Alzheimer’s disease: interplay mechanisms and clinical translation | 2023 | https://pmc.ncbi.nlm.nih.gov/articles/PMC10349496/pdf/12974_2023_Article_2853.pdf |
+| Therapeutic Advances in Targeting the Amyloid-β Pathway for Alzheimer’s Disease | 2025 | https://pmc.ncbi.nlm.nih.gov/articles/PMC12564542/pdf/brainsci-15-01101.pdf |
+| Therapeutic Targets for Alzheimer’s Disease: Amyloid Vs. Non Amyloid. Where Does Consensus Lie Today? An CTAD Task Force Report | 2023 | https://link.springer.com/content/pdf/10.14283/jpad.2022.29.pdf |
+| Treatment of Alzheimer’s Disease: Beyond Symptomatic Therapies | 2023 | https://pmc.ncbi.nlm.nih.gov/articles/PMC10531090/pdf/ijms-24-13900.pdf |
 
 ## Направления для дальнейшего развития
 
